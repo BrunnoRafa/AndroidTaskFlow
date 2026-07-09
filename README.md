@@ -1,234 +1,184 @@
 # 📋 TaskFlow
 
-TaskFlow é um aplicativo Android para gerenciamento de tarefas, desenvolvido com Kotlin e Jetpack Compose.
+TaskFlow é um aplicativo Android para gerenciamento de tarefas desenvolvido com **Kotlin** e **Jetpack Compose**, seguindo as recomendações atuais da plataforma Android para construção de aplicações modernas.
 
-O objetivo deste projeto é servir como um estudo prático de desenvolvimento Android moderno, aplicando boas práticas de arquitetura, organização de código e documentação desde o início.
+O projeto está sendo desenvolvido com foco em:
+
+- boas práticas de arquitetura;
+- organização de código;
+- componentização;
+- desenvolvimento Android moderno;
+- documentação técnica.
 
 ---
 
-# 🎯 Objetivos
+# 🎯 Objetivo
 
-Durante o desenvolvimento deste projeto serão aplicados conceitos utilizados em projetos profissionais, como:
+Construir um aplicativo Android completo que sirva como referência para estudos sobre desenvolvimento Android moderno utilizando:
 
 - Kotlin
 - Jetpack Compose
 - Material Design 3
-- Navigation Compose
 - MVVM
-- Repository Pattern
-- Room Database
-- Coroutines
 - StateFlow
-- Clean Code
-- Clean Architecture (adaptada)
-- Git Workflow
-- Documentação Técnica
+- Room
+- Navigation Compose
+- Repository Pattern
+
+O foco do projeto é privilegiar **qualidade de código**, **manutenibilidade** e **boas práticas**, em vez de apenas implementar funcionalidades.
 
 ---
 
-# 📱 Funcionalidades (Roadmap)
+# 🛠 Stack Tecnológica
 
-## Sprint 1
-- [x] Planejamento do projeto
-- [x] Levantamento de requisitos
-- [x] Definição da arquitetura
-- [x] Criação do projeto Android
-- [ ] Estrutura inicial
-
-## Sprint 2
-- [ ] Primeira tela
-- [ ] Componentes reutilizáveis
-
-## Sprint 3
-- [ ] Navegação
-
-## Sprint 4
-- [ ] Persistência de dados com Room
-
-## Sprint 5
-- [ ] CRUD completo
-
-## Sprint 6
-- [ ] Pesquisa
-
-## Sprint 7
-- [ ] Filtros
-
-## Sprint 8
-- [ ] Polimento da interface
+| Tecnologia | Status |
+|------------|:------:|
+| Kotlin | ✅ |
+| Jetpack Compose | ✅ |
+| Material Design 3 | ✅ |
+| Android Studio Meerkat | ✅ |
+| Gradle Kotlin DSL | ✅ |
+| Version Catalog | ✅ |
+| ViewModel | ⏳ |
+| StateFlow | ⏳ |
+| Navigation Compose | ⏳ |
+| Room | ⏳ |
+| Coroutines | ⏳ |
+| Hilt | ⏳ |
+| Testes | ⏳ |
 
 ---
 
 # 🏗 Arquitetura
 
-O projeto seguirá uma adaptação da Clean Architecture utilizando MVVM.
+O projeto utiliza uma adaptação da **Clean Architecture** com **MVVM**.
 
-```
+```text
 Presentation
-        │
-ViewModel
-        │
-Repository
-        │
-Data Source (Room)
+      │
+ ViewModel
+      │
+ Repository
+      │
+Local Data Source
 ```
 
-Organização prevista:
+Mais detalhes:
 
-```
-com.brunorafael.taskflow
-│
-├── data
-│
-├── domain
-│
-├── ui
-│   ├── components
-│   ├── navigation
-│   ├── screens
-│   └── theme
-│
-├── utils
-│
-└── viewmodel
-```
+- 📄 docs/architecture.md
 
 ---
 
-# 🛠 Tecnologias
+# 📂 Estrutura do Projeto
 
-- Kotlin
-- Jetpack Compose
-- Material Design 3
-- Android Studio Meerkat
-- Gradle Kotlin DSL
-- Version Catalog
-- Room
-- Coroutines
-- StateFlow
-
----
-
-# 📂 Organização do Projeto
-
-```
+```text
 TaskFlow
 │
 ├── app
-├── assets
+│
 ├── docs
-├── roadmap
+│   ├── architecture.md
+│   ├── architecture-decisions.md
+│   ├── changelog.md
+│   ├── conventions.md
+│   └── roadmap.md
+│
 └── README.md
 ```
 
 ---
 
-# 📖 Documentação
+# 📚 Documentação
 
-A documentação do projeto será organizada na pasta `docs`.
+Toda a documentação técnica está organizada na pasta `docs`.
 
-Exemplos:
+| Documento | Descrição |
+|-----------|-----------|
+| architecture.md | Arquitetura da aplicação |
+| architecture-decisions.md | Architecture Decision Records (ADR) |
+| conventions.md | Convenções adotadas no projeto |
+| roadmap.md | Planejamento das próximas entregas |
+| changelog.md | Histórico das implementações |
 
+---
+
+# 🚀 Roadmap
+
+O planejamento completo do projeto pode ser consultado em:
+
+```text
+docs/roadmap.md
+```
+
+---
+
+# 📐 Convenções
+
+Durante o desenvolvimento serão adotadas as recomendações atuais para aplicações Android modernas.
+
+Entre elas:
+
+- Material Design 3
+- MVVM
+- Componentes reutilizáveis
+- Stateless Composables
+- State Hoisting
+- Version Catalog
+- Code Review em todas as implementações
 - Architecture Decision Records (ADR)
-- Arquitetura
-- Diagramas
-- Padrões adotados
-- Fluxo de desenvolvimento
 
----
+As convenções detalhadas encontram-se em:
 
-# 🤝 Working Agreement
-
-Este projeto seguirá as seguintes regras durante todo o desenvolvimento.
-
-## Regra #001 — Fluxo de Revisão
-
-Toda Sprint seguirá o fluxo:
-
-```
-Planejamento
-        ↓
-Implementação
-        ↓
-Code Review
-        ↓
-Correções
-        ↓
-Nova Review
-        ↓
-Aprovado
-        ↓
-Próxima Sprint
+```text
+docs/conventions.md
 ```
 
-Nenhuma Sprint será iniciada antes da aprovação da Sprint atual.
+---
+
+# 📖 Como executar o projeto
+
+## Pré-requisitos
+
+- Android Studio Meerkat ou superior
+- JDK 17
+- Android SDK
+- Emulador Android ou dispositivo físico
+
+## Executando
+
+```bash
+git clone https://github.com/<usuario>/TaskFlow.git
+```
+
+Abra o projeto no Android Studio e execute a aplicação.
 
 ---
 
-## Regra #002 — Uma responsabilidade por Sprint
+# 📋 Status do Projeto
 
-Cada Sprint possuirá apenas um objetivo.
+🚧 Em desenvolvimento.
 
-Não serão introduzidos novos conceitos enquanto existirem pendências na Sprint atual.
+Atualmente o projeto possui:
 
----
+- Estrutura inicial
+- Organização por componentes
+- HomeScreen
+- Introdução ao Jetpack Compose
+- Modifier
+- Column
+- Scaffold
 
-## Regra #003 — Revisão Técnica
+As próximas entregas podem ser acompanhadas em:
 
-Toda revisão será composta por:
-
-- Objetivo
-- Review
-- Resultado
-- Correções (quando necessário)
-
----
-
-## Regra #004 — Critérios de Aprovação
-
-Existem apenas três estados para uma Sprint:
-
-- 🟢 Aprovado
-- 🟡 Aprovado com observações
-- 🔴 Reprovado
-
----
-
-## Regra #005 — Código compreendido antes de ser escrito
-
-Nenhum trecho de código será copiado sem que seu funcionamento seja compreendido.
-
-Sempre responderemos:
-
-- O que faz?
-- Por que existe?
-- Quando utilizar?
-- Existe alternativa?
-
----
-
-## Regra #006 — Evolução incremental
-
-O projeto será desenvolvido em pequenas entregas.
-
-A prioridade será sempre:
-
-1. Clareza
-2. Organização
-3. Qualidade
-4. Evolução contínua
-
----
-
-# 🚀 Objetivo Final
-
-Ao final do projeto espera-se possuir um aplicativo Android pronto para evolução e possível publicação na Google Play Store, além de um código organizado que possa servir como portfólio de desenvolvimento Android moderno.
+```text
+docs/changelog.md
+```
 
 ---
 
 # 👨‍💻 Desenvolvedor
 
-Bruno Rafael
+**Bruno Rafael**
 
 ---
 
